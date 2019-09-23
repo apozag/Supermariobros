@@ -9,7 +9,7 @@ public:
 	Vector2D pos0;
 
 	Question(Vector2D* pos,int w,int h, SDL_Renderer* rend):
-		Set(pos, w, h, rend, "question.png", 1.0), 
+		Set(pos, w, h, rend, "assets/question.png", 1.0), 
 		pos0(*pos)
 	{
 		setType(QUESTION);

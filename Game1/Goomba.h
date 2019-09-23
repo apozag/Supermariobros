@@ -8,7 +8,7 @@ class Goomba : public Body{
 private:
 	std::vector<Set*>* quadrant;
 public:
-	Goomba(Vector2D* pos, SDL_Renderer* rend) : Body(pos, 50, 50, rend, "goombaSpriteSheet.png", 1.0, false) { setVelX(-0.5); getSrcRect()->h = 16; getSrcRect()->w = 16; }
+	Goomba(Vector2D* pos, SDL_Renderer* rend) : Body(pos, 50, 50, rend, "assets/goombaSpriteSheet.png", 1.0, false) { setVelX(-0.5); getSrcRect()->h = 16; getSrcRect()->w = 16; }
 	void update(const double &dt);
 	void render();
 	void clear();

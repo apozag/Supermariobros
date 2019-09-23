@@ -5,7 +5,7 @@
 #include <fstream>
 #include <vector>
 #include <stdlib.h>
-#include "SDL.h"
+#include <SDL.h>
 class Player;
 class Scene;
 #include "Player.h"

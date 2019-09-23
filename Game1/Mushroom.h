@@ -8,7 +8,7 @@ class Mushroom : public Body{
 private:
 	std::vector<Set*>* quadrant;
 public: 
-	Mushroom(Vector2D* pos, SDL_Renderer* rend) : Body(pos, 50, 50, rend, "mushroom.png", 1.0, false){}
+	Mushroom(Vector2D* pos, SDL_Renderer* rend) : Body(pos, 50, 50, rend, "assets/mushroom.png", 1.0, false){}
 	void update(const double &dt);
 	void render();
 	void clear();

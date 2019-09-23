@@ -23,7 +23,6 @@ class Player : public Body{
 private:
 	Game* game;
 	double MAX_VELOCITY = 2;
-	Uint8 key = 0;
 	bool grounded = false;
 	std::vector<Set*>* quadrant;
 	animation_type animationType = IDLE_RIGHT;
@@ -33,7 +32,7 @@ public:
 	Player() :Body() { }
 	~Player(){}
 	Player(Vector2D *p, int w, int h, SDL_Renderer* rend, const char* texture, Game* g) :Body(p, w, h, rend, texture, 1.0, true) { game = g; }
-	Player(Player* p) :Player(p->getPos(), (int)p->getW(), (int)p->getH(), p->getRenderer(), "walk_right.png", p->getGame()) {}
+	Player(Player* p) :Player(p->getPos(), (int)p->getW(), (int)p->getH(), p->getRenderer(), "assets/walk_right.png", p->getGame()) {}
 	Body* clone() { return new Player(this); }
 
 	const bool isGrounded() {return grounded;}
@@ -56,7 +55,6 @@ public:
 
 	const double& getMAX_VELOCITY() { return MAX_VELOCITY; }
 
-	void handleEvents(const Uint8* keystates, const double &dt);
 
 	void setAnimationType(animation_type at) { animationType = at;  }
 

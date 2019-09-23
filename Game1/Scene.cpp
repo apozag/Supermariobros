@@ -19,10 +19,10 @@ bool Scene::loadLevel(int level) {
 
 	switch (level) {
 	case 1:
-		myReadFile.open("level1.txt");
+		myReadFile.open("levels/level1.txt");
 		break;
 	case 2:
-		myReadFile.open("level2.txt");
+		myReadFile.open("levels/level2.txt");
 	}
 
 	char c;
@@ -49,7 +49,7 @@ bool Scene::loadLevel(int level) {
 			
 			switch (c) {
 			case '1':
-				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "floor.png", 1.0);
+				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "assets/floor.png", 1.0);
 				block->setType(FLOOR);
 				s->push_back(block);
 				set.push_back(block);
@@ -59,7 +59,7 @@ bool Scene::loadLevel(int level) {
 				}
 				break;
 			case '2':
-				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "brick.png", 1.0);
+				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "assets/brick.png", 1.0);
 				block->setType(BRICK);
 				s->push_back(block);
 				set.push_back(block);
@@ -70,7 +70,7 @@ bool Scene::loadLevel(int level) {
 				break;
 
 			case '3':
-				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "question.png", 1.0);
+				block = new Set(new Vector2D(xpos, ypos), blockwidth, blockheight, renderer, "assets/question.png", 1.0);
 				block->setType(QUESTION);
 				s->push_back(block);
 				set.push_back(block);

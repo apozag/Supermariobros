@@ -7,7 +7,7 @@
 
 class Coin : public Entity{
 public:
-	Coin(Vector2D *p, SDL_Renderer* rend): Entity(p, 50, 50, rend, "coin.png", 1.0, false){}
+	Coin(Vector2D *p, SDL_Renderer* rend): Entity(p, 50, 50, rend, "assets/coin.png", 1.0, false){}
 	void pickup();
 	void clear();
 	Coin* clone() { return this; };

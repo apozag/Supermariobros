@@ -232,22 +232,3 @@ bool Player::collideY(Entity* obj, const double &velY) {
 	return false;
 
 }
-
-
-void Player::handleEvents(const Uint8* keystates, const double  &dt) {
-	/*
-	SDL_PumpEvents();
-
-
-	if (keystates[SDL_SCANCODE_DOWN]){
-		setVelX(std::min(getVelX() + 0.05*dt, 0.0));
-	}
-	else if (keystates[SDL_SCANCODE_UP]) {
-		setVelX(std::max(getVelX() - 0.05*dt, 0.0));
-	}
-	else {
-		setVelX(std::max(getVelX() - getVelX()*dt, -MAX_VELOCITY));
-	}
-	*/
-
-}
